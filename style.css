@@ -1,0 +1,60 @@
+/* header section */
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    background-color: lightblue;
+    padding: 20px;
+}
+
+
+/* navbar */
+ul,
+li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    background-color: lightblue;
+    margin: 0px;
+}
+
+ul {
+    width: 100%;
+}
+
+li {
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+
+nav {
+    text-align: center;
+}
+
+
+/* content section */
+.product-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    display: inline-block;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
