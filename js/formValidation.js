@@ -34,9 +34,10 @@ function validateForm() {
         passwordError.innerText = "Password is required";
         isValid = false;
     } else if (!isPasswordValid(password)) {
-        passwordError.innerText = "Password must contain both numbers and alphabets";
+        passwordError.innerText = "Password must contain both numbers, alphabets, special characters, and have at least 8 characters";
         isValid = false;
     }
+
 
     // Validation for confirm password
     if (confirmPassword.trim() === "") {
@@ -48,4 +49,13 @@ function validateForm() {
     }
 
     return isValid;
+
+    function isPasswordValid(password) {
+        // Password must contain at least one number, one alphabet, one special character, and have minimum length of 8 characters
+        var hasNumber = /\d/.test(password);
+        var hasAlphabet = /[a-zA-Z]/.test(password);
+        var hasSpecialCharacter = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(password);
+        var hasMinLength = password.length >= 8;
+        return hasNumber && hasAlphabet && hasSpecialCharacter && hasMinLength;
+    }
 }
