@@ -13,7 +13,7 @@
     <header>
         <div class="header-section">
             <img src="https://w7.pngwing.com/pngs/713/936/png-transparent-online-shopping-shopping-cart-logo-e-commerce-market-blue-angle-company.png"
-                alt="logo" width="80px">
+                alt="logo" width="50px" height="50px">
             <h1>E-commerce Website</h1>
         </div>
     </header>
@@ -27,11 +27,18 @@
             <li>Contact</li>
             <li><a href="./profile.html">Profile</a></li>
         </ul>
+        <div id="search-bar">
+            <input type="text" id="searchInput" name="q" placeholder="Enter your search term...">
+            <button id="search-btn" type="submit" onclick="filterProducts()">Search</button>
+        </div>
     </nav>
+
+
 
     <!-- content section -->
     <section>
-        <div class="product-container">
+        <div id="noResultMessage" style="display: none;">No such item found</div>
+        <div id="product-container">
             <div class="product-card">
                 <img class="product-image"
                     src="https://th.bing.com/th/id/R.915fdb8ac5fd873c96c88c3e6a6cb291?rik=VIWz1JWapFxc8g&riu=http%3a%2f%2frlv.zcache.com%2fi_love_e_commerce_t_shirt-r866c8769d5824e33818215481d0d1c06_jgoo9_630.jpg%3fview_padding%3d%5b285%2c0%2c285%2c0%5d&ehk=ZCdNxZeX3uZb5FR4xb46uQcEW12ApYhPfqTZbvbd%2bq4%3d&risl=&pid=ImgRaw&r=0"
@@ -55,9 +62,9 @@
                 <img class="product-image"
                     src="https://th.bing.com/th/id/R.915fdb8ac5fd873c96c88c3e6a6cb291?rik=VIWz1JWapFxc8g&riu=http%3a%2f%2frlv.zcache.com%2fi_love_e_commerce_t_shirt-r866c8769d5824e33818215481d0d1c06_jgoo9_630.jpg%3fview_padding%3d%5b285%2c0%2c285%2c0%5d&ehk=ZCdNxZeX3uZb5FR4xb46uQcEW12ApYhPfqTZbvbd%2bq4%3d&risl=&pid=ImgRaw&r=0"
                     alt="Product 1">
-                <h3>Product 1</h3>
-                <p>Description of Product 1.</p>
-                <p>$19.99</p>
+                <h3>Product 3</h3>
+                <p>Description of Product 3.</p>
+                <p>$16.99</p>
                 <button>Add to Cart</button>
             </div>
 
@@ -65,18 +72,18 @@
                 <img class="product-image"
                     src="https://image.spreadshirtmedia.com/image-server/v1/mp/products/T1263A799MPA3539PT17X0Y16D1011454073FS4216/views/1,width=378,height=378,appearanceId=799,backgroundColor=F2F2F2,modelId=1982,crop=list,version=1572083949,modelImageVersion=1555576847/e-commerce-product-manage-mens-sport-t-shirt.jpg"
                     alt="Product 2">
-                <h3>Product 2</h3>
-                <p>Description of Product 2.</p>
-                <p>$24.99</p>
+                <h3>Product 4</h3>
+                <p>Description of Product 4.</p>
+                <p>$54.99</p>
                 <button>Add to Cart</button>
             </div>
             <div class="product-card">
                 <img class="product-image"
                     src="https://th.bing.com/th/id/R.915fdb8ac5fd873c96c88c3e6a6cb291?rik=VIWz1JWapFxc8g&riu=http%3a%2f%2frlv.zcache.com%2fi_love_e_commerce_t_shirt-r866c8769d5824e33818215481d0d1c06_jgoo9_630.jpg%3fview_padding%3d%5b285%2c0%2c285%2c0%5d&ehk=ZCdNxZeX3uZb5FR4xb46uQcEW12ApYhPfqTZbvbd%2bq4%3d&risl=&pid=ImgRaw&r=0"
                     alt="Product 1">
-                <h3>Product 1</h3>
-                <p>Description of Product 1.</p>
-                <p>$19.99</p>
+                <h3>Product 5</h3>
+                <p>Description of Product 5.</p>
+                <p>$15.99</p>
                 <button>Add to Cart</button>
             </div>
 
@@ -84,18 +91,18 @@
                 <img class="product-image"
                     src="https://image.spreadshirtmedia.com/image-server/v1/mp/products/T1263A799MPA3539PT17X0Y16D1011454073FS4216/views/1,width=378,height=378,appearanceId=799,backgroundColor=F2F2F2,modelId=1982,crop=list,version=1572083949,modelImageVersion=1555576847/e-commerce-product-manage-mens-sport-t-shirt.jpg"
                     alt="Product 2">
-                <h3>Product 2</h3>
-                <p>Description of Product 2.</p>
-                <p>$24.99</p>
+                <h3>Product 6</h3>
+                <p>Description of Product 6.</p>
+                <p>$64.99</p>
                 <button>Add to Cart</button>
             </div>
             <div class="product-card">
                 <img class="product-image"
                     src="https://th.bing.com/th/id/R.915fdb8ac5fd873c96c88c3e6a6cb291?rik=VIWz1JWapFxc8g&riu=http%3a%2f%2frlv.zcache.com%2fi_love_e_commerce_t_shirt-r866c8769d5824e33818215481d0d1c06_jgoo9_630.jpg%3fview_padding%3d%5b285%2c0%2c285%2c0%5d&ehk=ZCdNxZeX3uZb5FR4xb46uQcEW12ApYhPfqTZbvbd%2bq4%3d&risl=&pid=ImgRaw&r=0"
                     alt="Product 1">
-                <h3>Product 1</h3>
-                <p>Description of Product 1.</p>
-                <p>$19.99</p>
+                <h3>Product 7</h3>
+                <p>Description of Product 7.</p>
+                <p>$17.99</p>
                 <button>Add to Cart</button>
             </div>
 
@@ -103,18 +110,18 @@
                 <img class="product-image"
                     src="https://image.spreadshirtmedia.com/image-server/v1/mp/products/T1263A799MPA3539PT17X0Y16D1011454073FS4216/views/1,width=378,height=378,appearanceId=799,backgroundColor=F2F2F2,modelId=1982,crop=list,version=1572083949,modelImageVersion=1555576847/e-commerce-product-manage-mens-sport-t-shirt.jpg"
                     alt="Product 2">
-                <h3>Product 2</h3>
-                <p>Description of Product 2.</p>
-                <p>$24.99</p>
+                <h3>Product 8</h3>
+                <p>Description of Product 8.</p>
+                <p>$84.99</p>
                 <button>Add to Cart</button>
             </div>
             <div class="product-card">
                 <img class="product-image"
                     src="https://th.bing.com/th/id/R.915fdb8ac5fd873c96c88c3e6a6cb291?rik=VIWz1JWapFxc8g&riu=http%3a%2f%2frlv.zcache.com%2fi_love_e_commerce_t_shirt-r866c8769d5824e33818215481d0d1c06_jgoo9_630.jpg%3fview_padding%3d%5b285%2c0%2c285%2c0%5d&ehk=ZCdNxZeX3uZb5FR4xb46uQcEW12ApYhPfqTZbvbd%2bq4%3d&risl=&pid=ImgRaw&r=0"
                     alt="Product 1">
-                <h3>Product 1</h3>
-                <p>Description of Product 1.</p>
-                <p>$19.99</p>
+                <h3>Product 9</h3>
+                <p>Description of Product 9.</p>
+                <p>$99.99</p>
                 <button>Add to Cart</button>
             </div>
 
@@ -122,9 +129,9 @@
                 <img class="product-image"
                     src="https://image.spreadshirtmedia.com/image-server/v1/mp/products/T1263A799MPA3539PT17X0Y16D1011454073FS4216/views/1,width=378,height=378,appearanceId=799,backgroundColor=F2F2F2,modelId=1982,crop=list,version=1572083949,modelImageVersion=1555576847/e-commerce-product-manage-mens-sport-t-shirt.jpg"
                     alt="Product 2">
-                <h3>Product 2</h3>
-                <p>Description of Product 2.</p>
-                <p>$24.99</p>
+                <h3>Product 10</h3>
+                <p>Description of Product 10.</p>
+                <p>$124.99</p>
                 <button>Add to Cart</button>
             </div>
         </div>
@@ -134,6 +141,8 @@
     <footer>
         <p>&copy; 2024 Your E-commerce Site. All rights reserved.</p>
     </footer>
+
+    <script src="./js/searchFilter.js"></script>
 </body>
 
 </html>
